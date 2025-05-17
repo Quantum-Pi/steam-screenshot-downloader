@@ -3,6 +3,7 @@
     import "../app.css";
     import Titlebar from "custom-tauri-titlebar";
     import { getCurrentWindow } from "@tauri-apps/api/window";
+    import { openUrl } from "@tauri-apps/plugin-opener";
 
     const titlebar = new Titlebar({
         theme: {
@@ -15,7 +16,21 @@
     titlebar.addTitle("Steam Screenshot Downloader");
     titlebar.addIcon({
         type: "src",
-        data: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik01IDIxcS0uODI1IDAtMS40MTItLjU4N1QzIDE5VjVxMC0uODI1LjU4OC0xLjQxMlQ1IDNoMTRxLjgyNSAwIDEuNDEzLjU4OFQyMSA1djE0cTAgLjgyNS0uNTg3IDEuNDEzVDE5IDIxem0xLTguNDI1bDQtNGw0IDRsNC00bDEgMVY1SDV2Ni41NzV6TTUgMTloMTR2LTYuNmwtMS0xbC00IDRsLTQtNGwtNCA0bC0xLTF6bTAgMHYtNi42djJWNXoiLz48L3N2Zz4=",
+        data: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNNSAyMXEtLjgyNSAwLTEuNDEyLS41ODdUMyAxOVY1cTAtLjgyNS41ODgtMS40MTJUNSAzaDE0cS44MjUgMCAxLjQxMy41ODhUMjEgNXYxNHEwIC44MjUtLjU4NyAxLjQxM1QxOSAyMXptMS04LjQyNWw0LTRsNCA0bDQtNGwxIDFWNUg1djYuNTc1ek01IDE5aDE0di02LjZsLTEtMWwtNCA0bC00LTRsLTQgNGwtMS0xem0wIDB2LTYuNnYyVjV6Ii8+PC9zdmc+",
+    });
+    titlebar.addMenu({
+        label: "File",
+        items: [
+            {
+                label: "Help",
+                type: "item",
+                action: async () => {
+                    await openUrl(
+                        "https://github.com/Quantum-Pi/steam-screenshot-downloader",
+                    );
+                },
+            },
+        ],
     });
     titlebar.addButton(
         "btn-close",
