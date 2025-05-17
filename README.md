@@ -1,5 +1,7 @@
 # steam-screenshot-downloader
 
+<img width="512px" src="./image/demo.png">
+
 ## How to use
 
 1. Get your [Steam Web API Key](https://steamcommunity.com/dev/apikey)
