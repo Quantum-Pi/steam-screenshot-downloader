@@ -128,7 +128,7 @@
   }
 </script>
 
-<main class="w-screen h-screen">
+<main class="w-screen h-[calc(100vh-30px)]">
   <div class="flex flex-col items-center justify-center h-full gap-y-8">
     <form
       class="mx-auto mt-8 w-full max-w-md space-y-4"
@@ -138,6 +138,7 @@
         <span class="label-text">Web API Key</span>
         <div class="input-group grid-cols-[1fr_auto]">
           <input
+            required
             type="password"
             placeholder="Steam Web API Key"
             class="ig-input"
@@ -161,6 +162,7 @@
             <option value="USERNAME">Username</option>
           </select>
           <input
+            required
             type={userMode === "STEAM_ID" ? "number" : "text"}
             class="ig-input"
             placeholder={userMode === "STEAM_ID" ? "Steam ID" : "Username"}
@@ -179,6 +181,7 @@
       <label class="label">
         <span class="label-text">AppID</span>
         <input
+          required
           type="number"
           class="input"
           placeholder="Game App ID"
@@ -206,11 +209,11 @@
       <button
         type="submit"
         class="btn preset-filled-primary-500"
-        disabled={running}>Submit</button
+        disabled={running}>Start</button
       >
     </form>
     <textarea
-      class="textarea w-3/4 h-[90%] mb-8"
+      class="textarea w-3/4 h-full mb-4"
       rows="5"
       disabled
       value={logBody}
