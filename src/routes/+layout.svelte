@@ -16,7 +16,7 @@
     titlebar.addTitle("Steam Screenshot Downloader");
     titlebar.addIcon({
         type: "src",
-        data: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNNSAyMXEtLjgyNSAwLTEuNDEyLS41ODdUMyAxOVY1cTAtLjgyNS41ODgtMS40MTJUNSAzaDE0cS44MjUgMCAxLjQxMy41ODhUMjEgNXYxNHEwIC44MjUtLjU4NyAxLjQxM1QxOSAyMXptMS04LjQyNWw0LTRsNCA0bDQtNGwxIDFWNUg1djYuNTc1ek01IDE5aDE0di02LjZsLTEtMWwtNCA0bC00LTRsLTQgNGwtMS0xem0wIDB2LTYuNnYyVjV6Ii8+PC9zdmc+",
+        data: "./logo.svg",
     });
     titlebar.addMenu({
         label: "File",
